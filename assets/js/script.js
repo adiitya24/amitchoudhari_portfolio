@@ -157,3 +157,14 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+function toggleSummary(button) {
+  const summary = button.nextElementSibling;
+  if (summary.style.display === 'none' || summary.style.display === '') {
+    summary.style.display = 'block';
+    button.textContent = 'Hide Summary';
+  } else {
+    summary.style.display = 'none';
+    button.textContent = 'Show Summary';
+  }
+}
